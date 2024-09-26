@@ -10,7 +10,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended" // Integrate Prettier with ESLint
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -20,12 +20,7 @@
       "jsx": true
     }
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "react-hooks",
-    "prettier" // Add Prettier plugin
-  ],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-explicit-any": "warn",
@@ -35,7 +30,12 @@
     "indent": ["error", 2],
     "semi": ["error", "always"],
     "linebreak-style": ["error", "unix"],
-    "max-len": ["warn", { "code": 80 }], // Set maximum line length to 80 characters
-    "prettier/prettier": "warn" // Show Prettier errors as ESLint errors
+    "max-len": ["warn", { "code": 80 }],
+    "prettier/prettier": [
+      "warn",
+      {
+        "trailingComma": "es5"
+      }
+    ]
   }
 }
