@@ -37,5 +37,6 @@
         "trailingComma": "es5"
       }
     ]
-  }
+  },
+  "indent": ["warn", 2, { "SwitchCase": 1 }]
 }
