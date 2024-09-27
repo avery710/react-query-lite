@@ -121,3 +121,9 @@ export interface QueryOptions<
   queryFn?: () => Promise<TQueryFnData>;
   queryKey?: TQueryKey;
 }
+
+export type NotifyEventType = "added" | "removed";
+
+export interface NotifyEvent {
+  type: NotifyEventType;
+}
