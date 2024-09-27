@@ -122,7 +122,7 @@ export interface QueryOptions<
   queryKey?: TQueryKey;
 }
 
-export type NotifyEventType = "added" | "removed";
+export type NotifyEventType = "added" | "removed" | "updated";
 
 export interface NotifyEvent {
   type: NotifyEventType;
