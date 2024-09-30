@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Query } from "./query";
+import { Action, Query } from "./query";
 import { Subscribable } from "./Subscribable";
 import { NotifyEvent, QueryKey } from "./types";
 
@@ -18,9 +18,16 @@ interface NotifyEventQueryRemoved extends NotifyEvent {
   query: Query<any, any, any, any>;
 }
 
+interface NotifyEventQueryUpdated extends NotifyEvent {
+  type: "updated";
+  query: Query<any, any, any, any>;
+  action: Action<any, any>;
+}
+
 export type QueryCacheNotifyEvent =
   | NotifyEventQueryAdded
-  | NotifyEventQueryRemoved;
+  | NotifyEventQueryRemoved
+  | NotifyEventQueryUpdated;
 
 type QueryCacheListener = (event: QueryCacheNotifyEvent) => void;
 

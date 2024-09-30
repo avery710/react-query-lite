@@ -12,7 +12,7 @@ export abstract class Removable {
     this.clearGcTimeout();
   }
 
-  protected scheduleGC(): void {
+  protected scheduleGc(): void {
     this.clearGcTimeout();
 
     this.#gcTimeout = setTimeout(() => {
